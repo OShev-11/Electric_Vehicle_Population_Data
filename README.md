@@ -13,7 +13,7 @@ crosstab_city_model = pd.crosstab(df_WA['City'], df_WA['Make'])
 crosstab_city_model.loc['Total'] = crosstab_city_model.sum()
 def total_cars_for_city(row):
     return row.sum()
-crosstab_city_model['Total_cars_for_city'] = crosstab_city_model.apply(total_cars_for_city, axis=1) - создаем сводную таблицу по столбцам City и Make, которая показывает, сколько раз встречается конкретная марка авто в каждом городе штата. Считаем общее количество для каждой марки по всем городам (строка Total), количество машин всех марок для каждого города (столбец Total_cars_for_city), и общее количество всех автомобилей(пересечение Total и Total_cars_for_city): решение через функцию
+crosstab_city_model['Total_cars_for_city'] = crosstab_city_model.apply(total_cars_for_city, axis=1) - создаем сводную таблицу по столбцам City и Make, которая показывает, сколько раз встречается конкретная марка авто в каждом городе штата. Считаем общее количество для каждой марки по всем городам (строка Total), количество машин всех марок для каждого города (столбец Total_cars_for_city), и общее количество автомобилей всех марок(пересечение Total и Total_cars_for_city): решение через функцию
 
 crosstab_make_model = pd.crosstab(df_WA['Make'], df_WA['Model'])
 crosstab_make_model.loc['Total'] = crosstab_make_model.sum()
