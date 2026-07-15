@@ -1,7 +1,7 @@
 # Electric_Vehicle_Population_Data
 1.df.sort_values(by='State') - сортировка всего датафрейма по штатам
 
-2.df.groupby('State').agg({'Electric Range': 'mean'}).sort_values('Electric Range', ascending=False).head() - группировка данных по штатамБ вычисление и вывод среднего знаения Electric Range для каждого штата по убыванию
+2.df.groupby('State').agg({'Electric Range': 'mean'}).sort_values('Electric Range', ascending=False).head() - группировка данных по штатам, вычисление и вывод среднего знаения Electric Range для каждого штата по убыванию
 
 df.groupby('State')[['City', 'Make', 'Model']].value_counts() - группирует по штату, считает, сколько конкретных моделей конкретных марок в конкретных городах находится в каждом штате
 
